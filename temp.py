@@ -1,15 +1,9 @@
-import sys
-
 def celsius_to_fahrenheit(celsius=25):
-    return (celsius * 9/5) + 32
-
+    fahrenheit = (celsius * 9/5) + 32
+    return fahrenheit
 if __name__ == "__main__":
-    if len(sys.argv) == 2:
-        celsius = float(sys.argv[1])
-    else:
-        celsius = 25
-        print("Arguments not provided - using default values")
-
-    print("Celsius:", celsius)
-    print("Fahrenheit:", celsius_to_fahrenheit(celsius))
+    celsius_value = 25   # default temperature
+    result = celsius_to_fahrenheit(celsius_value)
+    print("Temperature in Celsius:", celsius_value)
+    print("Temperature in Fahrenheit:", result)
 
